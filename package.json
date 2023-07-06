@@ -7,7 +7,8 @@
     ]
   },
   "devDependencies": {
-    "@redwoodjs/core": "5.4.2"
+    "@redwoodjs/core": "5.4.2",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
@@ -24,6 +25,7 @@
   "scripts": {
     "dev": "rw dev",
     "pstudio": "rw prisma studio",
-    "migrate": "rw prisma migrate dev"
+    "migrate": "rw prisma migrate dev",
+    "test": "rw test"
   }
 }
