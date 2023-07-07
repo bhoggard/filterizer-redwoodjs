@@ -52,13 +52,6 @@ const NeighborhoodsList = ({ neighborhoods }) => {
               <td>
                 <nav className="rw-table-actions">
                   <Link
-                    to={routes.adminNeighborhood({ id: neighborhood.id })}
-                    title={'Show neighborhood ' + neighborhood.id + ' detail'}
-                    className="rw-button rw-button-small"
-                  >
-                    Show
-                  </Link>
-                  <Link
                     to={routes.adminEditNeighborhood({ id: neighborhood.id })}
                     title={'Edit neighborhood ' + neighborhood.id}
                     className="rw-button rw-button-small rw-button-blue"
