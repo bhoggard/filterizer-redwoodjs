@@ -1,17 +1,14 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider      = "prisma-client-js"
-  binaryTargets = "native"
-}
-
-// Define your own datamodels here and run `yarn redwood prisma migrate dev`
-// to create migrations for them and apply to your dev DB.
-// TODO: Please remove the following example:
 model Neighborhood {
-  id   BigInt @id @default(autoincrement())
-  name String @unique
+  id   BigInt  @id(map: "neighborhoods_pkey") @default(autoincrement())
+  name String? @unique(map: "index_neighborhoods_on_name") @db.VarChar
 }
